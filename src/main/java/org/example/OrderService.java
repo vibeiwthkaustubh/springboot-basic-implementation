@@ -3,6 +3,6 @@ package org.example;
 import org.springframework.stereotype.Component;
 
 @Component
-public class DemoClass {
-    
+public class OrderService {
+
 }
