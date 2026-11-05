@@ -18,8 +18,19 @@ public class OrderService {
 
 
 //    Dependency injection given using Constructor
-   public OrderService(@Qualifier("upiPayment") PaymentService p1, @Qualifier("emailNotification") NotificationService n1) {
+//   public OrderService(@Qualifier("upiPayment") PaymentService p1, @Qualifier("emailNotification") NotificationService n1) {
+//        this.p1 = p1;
+//        this.n1 = n1;
+//    }
+
+    @Autowired
+    @Qualifier("upiPayment")
+    public void setP1(PaymentService p1) {
         this.p1 = p1;
+    }
+    @Autowired // we need to add this Annotation while doing setter injection as this will tell spring to call this method after creating the objects.
+    @Qualifier("emailNotification")
+    public void setN1(NotificationService n1) {
         this.n1 = n1;
     }
 
