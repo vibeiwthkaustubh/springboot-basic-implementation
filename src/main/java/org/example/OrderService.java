@@ -3,14 +3,16 @@ package org.example;
 import org.example.Notification.NotificationService;
 import org.example.Payment.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class OrderService {
 
     @Autowired
+            @Qualifier("upiPayment")
     PaymentService p1;
-    @Autowired
+    @Autowired @Qualifier("smsNotification")
     NotificationService n1;
 
 
