@@ -8,9 +8,10 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan("org.example")
 public class AppConfig {
     @Bean
-     public PaymentService p1(){
+     public PaymentService upiPayment(){
          return new UpiPayment();
      }
+
 
 
 

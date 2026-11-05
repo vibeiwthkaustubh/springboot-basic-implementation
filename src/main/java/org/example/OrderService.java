@@ -11,19 +11,20 @@ public class OrderService {
 
 //    @Autowired @Qualifier("upiPayment")
     ////@Qualifier("upiPayment")The primary and the Qualifier annotation is used to solve the ambiguity problem arrived when 2 same type object is present and spring gets confused which one to inject.
-    @Autowired
+
     PaymentService p1;
 //    @Autowired
 //    //@Qualifier("smsNotification")
-    @Autowired
+
     NotificationService n1;
 
 
 //    Dependency injection given using Constructor
-//   public OrderService(@Qualifier("upiPayment") PaymentService p1, @Qualifier("emailNotification") NotificationService n1) {
-//        this.p1 = p1;
-//        this.n1 = n1;
-//    }
+   public OrderService(@Qualifier("upiPayment") PaymentService p1, @Qualifier("emailNotification") NotificationService n1) {
+        this.p1 = p1;
+        this.n1 = n1;
+    }
+
 
 //    @Autowired
 //    @Qualifier("upiPayment")
