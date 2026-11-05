@@ -3,7 +3,7 @@ package org.example.Payment;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-@Component @Primary
+//@Component @Primary
 public class CardPayment implements PaymentService {
     @Override
     public void pay(){
