@@ -9,10 +9,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class OrderService {
 
-    @Autowired
-            @Qualifier("upiPayment")
+    @Autowired @Qualifier("upiPayment")
+//@Qualifier("upiPayment")The primary and the Qualifier annotation is used to solve the ambiguity problem arrived when 2 same type object is present and spring gets confused which one to inject.
     PaymentService p1;
-    @Autowired @Qualifier("smsNotification")
+
+    @Autowired
+    //@Qualifier("smsNotification")
     NotificationService n1;
 
 

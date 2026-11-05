@@ -8,6 +8,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Main {
     static void main() {
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-
+       OrderService o1 = context.getBean(OrderService.class);
+       o1.placeOrder();
     }
 }
